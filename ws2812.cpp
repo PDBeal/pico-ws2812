@@ -98,14 +98,10 @@ void WS2812::show(void) {
         uint8_t redPtr = this->pixels[i*3];
         uint8_t greenPtr = this->pixels[(i*3)+1];
         uint8_t bluePtr = this->pixels[(i*3)+2];
+        uint32_t colorData = ((uint32_t)(redPtr) << 8) | ((uint32_t)(greenPtr) << 16) | (uint32_t)(bluePtr);
 
-        pio_sm_put_blocking(pixelPio, pixelSm, color(redPtr, greenPtr, bluePtr) << 8u);
+        pio_sm_put_blocking(pixelPio, pixelSm, colorData << 8u);
     }
-}
-
-uint32_t WS2812::color(uint8_t red, uint8_t green, uint8_t blue)
-{
-    return ((uint32_t)(red) << 8) | ((uint32_t)(green) << 16) | (uint32_t)(blue);
 }
 
 void WS2812::fillPixelColor(uint8_t red, uint8_t green, uint8_t blue)
