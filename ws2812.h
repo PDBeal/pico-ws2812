@@ -82,15 +82,6 @@ public:
     void fillPixelColor(uint8_t red, uint8_t green, uint8_t blue);
 
     /*!
-     * \brief Create a 32 bit value combining the 3 colors
-     *
-     * \param red: red value (0-255)
-     * \param green: green value(0-255)
-     * \param blue: blue value (0-255)
-     */
-    uint32_t color(uint8_t red, uint8_t green, uint8_t blue);
-
-    /*!
      * \brief Change strand length
      *
      * \param numLEDs Length to change to
