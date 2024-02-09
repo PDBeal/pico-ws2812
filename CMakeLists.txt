@@ -21,4 +21,8 @@ if(PICO_SDK)
     pico_generate_pio_header(pico-ws2812 ${CMAKE_CURRENT_LIST_DIR}/ws2812.pio)
 endif(PICO_SDK)
 
-
+# Link to pico_stdlib (gpio, time, etc. functions)
+target_link_libraries(${PROJECT_NAME} INTERFACE
+    pico_stdlib
+    hardware_pio
+)
