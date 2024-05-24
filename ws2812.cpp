@@ -10,8 +10,9 @@
  * \section author Author
  *
  * Written by PBeal
+ * 
  * \section license License
- * MIT license
+ * GNU LESSER GENERAL PUBLIC LICENSE, V3.0
  */
 #include "ws2812.h"
 
