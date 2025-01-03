@@ -21,6 +21,7 @@ WS2812::WS2812(uint16_t num, uint8_t pin, PIO pio, int sm) {
 
     pixelSm = sm;
     pixelPio = pio;
+    pixelGpio = pin;
 }
 
 WS2812::WS2812(uint16_t num, uint8_t pin) {
